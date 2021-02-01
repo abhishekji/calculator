@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+    	.elemGrid {
+        	display: grid;
+            grid-template-columns: auto auto auto auto;
+            background-color: lightblue;
+            width:200px;
+			
+        }
+        .elemGrid .elem {
+			padding:10px;
+        }
+        .elemGrid .elem:hover {
+			background-color: white;
+        }
+        .elemGrid :first-child {
+        	grid-column-start: 1;
+            grid-column-end: 4;
+        }
+    </style>
+</head>
+<body>
+<h2> Calculator </h2>
+
+<div class="calculator">
+<form name ="cal">
+<input type="text" id="result" name="result">
+<div class="elemGrid">
+	<span class="elem" onclick="document.forms[0].result.value = ''"> c </span>
+    <span class="elem" onclick="document.forms[0].result.value += '/'"> /</span>
+    <span class="elem" onclick="document.forms[0].result.value += '7'"> 7</span>
+    <span class="elem" onclick="document.forms[0].result.value += '8'"> 8</span>
+    <span class="elem" onclick="document.forms[0].result.value += '9'"> 9 </span>
+    <span class="elem" onclick="document.forms[0].result.value += '*'"> * </span>
+    <span class="elem" onclick="document.forms[0].result.value += '4'"> 4 </span>
+    <span class="elem" onclick="document.forms[0].result.value += '5'"> 5</span>
+    <span class="elem" onclick="document.forms[0].result.value += '6'"> 6</span>
+    <span class="elem" onclick="document.forms[0].result.value += '-'"> - </span>
+    <span class="elem" onclick="document.forms[0].result.value += '3'"> 3</span>
+    <span class="elem" onclick="document.forms[0].result.value += '2'"> 2 </span>
+    <span class="elem" onclick="document.forms[0].result.value += '1'"> 1</span>
+    <span class="elem" onclick="document.forms[0].result.value += '+'"> + </span>
+    <span class="elem" onclick="document.forms[0].result.value += '0'"> 0</span>
+    <span class="elem" onclick="document.forms[0].result.value += '00'"> 00</span>
+    <span class="elem" onclick="document.forms[0].result.value += '.'"> .</span>
+    <span class="elem" onclick="document.forms[0].result.value = eval(document.forms[0].result.value)">= </span>
+</div>
+</form>
+</div>
+</body>
+</html>
